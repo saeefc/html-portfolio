@@ -1,32 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>My Protfolio</title>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name - Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body.dark-mode {
+      background-color: #222;
+      color: #f4f4f4;
+    }
+
+    header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-size: 1.1rem;
+    }
+
+    nav a:hover {
+      color: #3498db;
+    }
+
+    .theme-toggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .theme-toggle:hover {
+      background-color: #2980b9;
+    }
+
+    section {
+      padding: 2rem;
+      max-width: 800px;
+      margin: 2rem auto;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    body.dark-mode section {
+      background-color: #333;
+    }
+
+    h2 {
+      color: #2c3e50;
+      margin-bottom: 1rem;
+    }
+
+    body.dark-mode h2 {
+      color: #3498db;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    ul li {
+      margin: 0.5rem 0;
+    }
+
+    ul li a {
+      color: #3498db;
+      text-decoration: none;
+    }
+
+    ul li a:hover {
+      text-decoration: underline;
+    }
+
+    #about {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    #about img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #2c3e50;
+    }
+
+    body.dark-mode #about img {
+      border-color: #3498db;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+
+      nav a {
+        display: block;
+        margin: 0.5rem 0;
+      }
+
+      section {
+        margin: 1rem;
+        padding: 1rem;
+      }
+
+      #about {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      #about img {
+        width: 120px;
+        height: 120px;
+      }
+    }
+  </style>
 </head>
 <body>
+  <header>
     <h1>Saeef Chowdhury</h1>
-    <h2>Freelance Solution Architecture Engineer & Cybersecurity Engineer</h2>
-    <img src="" width="100" height="" alt="Photo">
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-    <p>I am a dedicated and experienced Freelancer specializing in Solution Architecture and Cybersecurity Engineering. With a strong foundation in [mention specific skills or technologies], I offer comprehensive solutions tailored to meet the unique needs of each client.</p>
+  <button class="theme-toggle" onclick="toggleTheme()">Toggle Dark Mode</button>
 
-    <h2>Skills</h2>
-    <ul>
-        <li>Solution Architecture</li>
-        <li>Cybersecurity Engineering</li>
-        <li>Cloud Technologies (AWS, Azure, GCP)</li>
-        </ul>
+  <section id="about">
+    <img src="image/Saeef.jpg" alt="Your Profile Photo">
+    <div>
+      <h2>About Me</h2>
+      <p>Hi, I'm Saeef, an aspiring cybersecurity engineer and ethical hacker. I'm passionate about securing web applications and learning web development to understand vulnerabilities better. Currently, I'm exploring HTML, CSS, JavaScript, and Cybersecurity as well as Cloud Engineering.</p>
+    </div>
+  </section>
 
+  <section id="projects">
     <h2>Projects</h2>
     <ul>
-        <li>Project 1: [Brief description of project]</li>
-        <li>Project 2: [Brief description of project]</li>
-        </ul>
+      <li>Login Form Security Test: Built a vulnerable login form and tested it for XSS using OWASP ZAP.</li>
+      <li>Portfolio Website: Created this webpage to showcase my skills (you're looking at it!).</li>
+      <li>More projects coming soon as I dive deeper into cybersecurity!</li>
+    </ul>
+  </section>
 
+  <section id="contact">
     <h2>Contact</h2>
-    <p>Email: your_email@example.com</p>
-    <p>Phone: +1234567890</p>
-    <p>LinkedIn: [Your LinkedIn profile link]</p>
+    <ul>
+      <li>Email: <a href="saeefc@gmail.com">saeefc@gmail.com</a></li>
+      <li>GitHub: <a href="https://github.com/yourusername">github.com/saeefc</a></li>
+      <li>LinkedIn: <a href="https://linkedin.com/in/yourusername">linkedin.com/in/saeefc</a></li>
+    </ul>
+  </section>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
 </body>
 </html>
